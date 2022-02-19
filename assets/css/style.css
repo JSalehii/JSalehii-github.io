@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+
+:root {
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px .... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --smal-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* ==================== colors ========================*/
+    --link-color: #757575;
+
+    /*====================== Margenes Bottom =================*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*====================== Z index =================*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*========================= container ===============================*/ 
+.container {
+    margin: 0 1.5rem;
+}
+
+
+
+/*========================= header ===============================*/ 
+
+.header {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: max-content;
+    box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-family: 'Dancing Script', sans-serif;
+    display: none;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: .5rem;
+    row-gap: .5rem;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+
+.nav__link:link, .nav__link:visited {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .5rem;
+    font-size: 1rem;
+    color: var(--link-color);
+}
+
+.nav__icon {
+    font-size: 1.5rem;
+}
+
+.nav__link:active {
+    transform: translateY(-5px);
+    transition: .3s;
+}
+
+
+
+
