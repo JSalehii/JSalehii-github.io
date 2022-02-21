@@ -258,7 +258,9 @@ a {
 
 .about__text h3 {
     color: #555;
+    font-size: var(--big-font-size);
 }
+
 
 .about__text h4, p {
     font-weight: 500;
@@ -333,3 +335,71 @@ a {
     margin-bottom: var(--mb-0-5);
 }
 
+/*========================= project ===============================*/
+
+.projects {
+    display: grid;
+    row-gap: var(--mb-1-5);
+    margin: 0 1rem;
+}
+
+.projects__title {
+    text-align: center;
+    margin: 2rem;
+    color: var(--dark-color);
+}
+
+.project {
+    padding: var(--mb-1);
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--mb-0-75);
+}
+
+.project__img {
+    border-radius: 12px;
+}
+
+.tag span {
+    margin-right: .5rem;
+    color: var(--link-color);
+}
+
+.project__title {
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.project__des {
+    color: var(--link-color);
+}
+
+.project__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: var(--mb-0-5);
+    margin-top: var(--mb-1);
+}
+
+.btn {
+    padding: 1rem;
+    width: 40%;
+    font-size: var(--h2-font-size);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.demo {
+    border: none;
+    background: var(--link-active-color);
+    color: #fff;
+}
+
+.code {
+    border: 1px solid var(--link-active-color);
+    color: var(--link-active-color);
+    background: transparent;
+}
