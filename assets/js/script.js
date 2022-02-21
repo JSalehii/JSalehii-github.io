@@ -10,13 +10,13 @@ particlesJS("particles-js", {
             },
         },
         color: {
-            value: "#333",
+            value: "#828282",
         },
         shape: {
             type: "circle",
             stroke: {
                 width: 0,
-                color: "#000000",
+                color: "#828282",
             },
             polygon: {
                 nb_sides: 5,
@@ -145,20 +145,22 @@ function printChar(word) {
 
 // deleting effect
 function deleteChar() {
-    let word = text.innerHTML;
-    let i = word.length - 1;
-    let id = setInterval(() => {
-        if (i >= 0) {
-            text.innerHTML = text.innerHTML.substring(
-                0,
-                text.innerHTML.length - 1
-            );
-            i--;
-        } else {
-            printChar(words[gen.next().value]);
-            clearInterval(id);
-        }
-    }, 300);
+    setTimeout(() => {
+        let word = text.innerHTML;
+        let i = word.length - 1;
+        let id = setInterval(() => {
+            if (i >= 0) {
+                text.innerHTML = text.innerHTML.substring(
+                    0,
+                    text.innerHTML.length - 1
+                );
+                i--;
+            } else {
+                printChar(words[gen.next().value]);
+                clearInterval(id);
+            }
+        }, 300);
+    }, 2000);
 }
 
 let gen = generator();

@@ -14,6 +14,7 @@
     /* ==================== colors ========================*/
     --link-color: #757575;
     --link-active-color: #4361ee;
+    --dark-color: #333;
     --white-color: #eee;
     --white-color2: #f1f1f1;
 
@@ -47,6 +48,7 @@ html {
 body {
     margin-bottom: 2rem;
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 ul {
@@ -250,7 +252,7 @@ a {
     flex-direction: column;
     row-gap: var(--mb-0-75);
     text-align: center;
-    padding: var(--mb-1);
+    margin: 1.5rem 3rem;
     color: var(--link-color);
 }
 
@@ -261,3 +263,73 @@ a {
 .about__text h4, p {
     font-weight: 500;
 }
+
+/*========================= skills ===============================*/
+
+.skills {
+    display: grid;
+    row-gap: var(--mb-1-5);
+}
+
+.skills__title {
+    color: var(--dark-color);
+    text-align: center;
+    padding: 1.5rem 3rem;
+    margin-top: 2rem;
+}
+
+.skills__data {
+    display: grid;
+    row-gap: var(--mb-1-5);
+    justify-items: center;
+}
+
+.skill {
+    width: 200px;
+    height: 200px;
+    padding: var(--mb-0-5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #333;
+    position: relative;
+    transition: 1s;
+    z-index: 0;
+}
+
+.skill::before, .skill::after {
+    position: absolute;
+    background: var(--white-color2);
+    z-index: -1;
+    transition: 1s;
+    content: '';
+}
+
+.skill::before {
+    height: 202px;
+    width: 200px;
+}
+
+.skill::after {
+    width: 202px;
+    height: 200px;
+}
+
+.skill:hover::before {
+    width: 0;
+}
+
+.skill:hover::after {
+    height: 0px;
+}
+
+
+
+.skill img {
+    width: 80%;
+    height: 60%;
+    margin-bottom: var(--mb-0-5);
+}
+
