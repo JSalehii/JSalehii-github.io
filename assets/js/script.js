@@ -140,7 +140,7 @@ function printChar(word) {
             text.innerHTML += word[i];
             i++;
         }
-    }, 400);
+    }, 300);
 }
 
 // deleting effect
@@ -159,9 +159,11 @@ function deleteChar() {
                 printChar(words[gen.next().value]);
                 clearInterval(id);
             }
-        }, 300);
+        }, 100);
     }, 2000);
 }
 
 let gen = generator();
 printChar(words[gen.next().value]);
+
+/*========================= link active ===============================*/

@@ -14,6 +14,7 @@
     /* ==================== colors ========================*/
     --link-color: #757575;
     --link-active-color: #4361ee;
+    --link-active-color-dark: #3f37c9;
     --dark-color: #333;
     --white-color: #eee;
     --white-color2: #f1f1f1;
@@ -46,9 +47,9 @@ html {
 }
 
 body {
-    margin-bottom: 2rem;
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+    background-color: var(--white-color2);
 }
 
 ul {
@@ -128,9 +129,9 @@ a {
 
 /*========================= home ===============================*/
 .main {
-    background-color: var(--white-color2);
     display: grid;
     row-gap: var(--mb-1);
+    padding-bottom: var(--mb-2-5);
 }
 
 .home {
@@ -227,18 +228,23 @@ a {
 
 .about {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* height: 100vh; */
+    /* display: flex; */
+    margin-top: 2rem;
+    /* flex-direction: column;
+    justify-content: center; */
 }
 
 .about__data {
+    margin: 0 1rem;
+    padding: 2rem 1rem;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     row-gap: var(--mb-1-5);
     justify-content: center;
     align-items: center;
+    background-color: #CED4DA;
 }
 
 .about__img {
@@ -266,9 +272,14 @@ a {
     font-weight: 500;
 }
 
+.about__png {
+    display: none;
+}
+
 /*========================= skills ===============================*/
 
 .skills {
+    margin-top: var(--mb-1-5);
     display: grid;
     row-gap: var(--mb-1-5);
 }
@@ -282,8 +293,10 @@ a {
 
 .skills__data {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     row-gap: var(--mb-1-5);
     justify-items: center;
+
 }
 
 .skill {
@@ -402,4 +415,212 @@ a {
     border: 1px solid var(--link-active-color);
     color: var(--link-active-color);
     background: transparent;
+}
+
+.demo:hover {
+    background-color: var(--link-active-color-dark);
+}
+
+.code:hover {
+    border-color: #4cc9f0;
+    color: #4cc9f0;
+}
+
+/*========================= footer ===============================*/
+
+.footer {
+    width: 100%;
+    padding: 1.5rem 2rem 6rem;
+    display: grid;
+    row-gap: var(--mb-1-5);
+    /* justify-content: center; */
+    background-color: #DEE2E6;
+    border-radius: 20px 20px 0 0;
+}
+
+
+
+.social {
+    display: grid;
+    row-gap: var(--mb-0-5);
+}
+
+.social__title {
+    color: var(--link-color);
+}
+
+.social hr {
+    display: none;
+}
+
+.social__icon {
+    font-size: var(--big-font-size);
+    padding: var(--mb-0-5);
+    cursor: pointer;
+    transition: 1s;
+}
+
+.github {
+    color: #333;
+}
+
+.linkedin {
+    color: #0a66c2;
+}
+
+.twitter {
+    color: #1da1f2;
+}
+
+.instagram {
+    color: #c32aa3;
+}
+
+.telegram {
+    color: #0088cc;
+}
+
+.call {
+    display: grid;
+    row-gap: var(--mb-1);
+}
+
+.call span {
+    font-size: 1.2rem;
+}
+
+.call h1 {
+    color: var(--link-color);
+}
+
+/*========================= for medium device ===============================*/
+
+@media screen and (min-width: 481px) {
+    .about__data {
+        flex-direction: row;
+        column-gap: var(--mb-1-5);
+    }
+
+    .about__img {
+        flex-basis: 30%;
+    }
+
+    .about__text {
+        flex-basis: 70%;
+        margin: 1rem 1.5rem;
+    }
+
+    /* ========= skills ========= */
+    .skills__title {
+        font-size: var(--big-font-size);
+    }
+
+    .skills__data {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ========= project ========= */
+    .projects {
+        margin: 0 2rem;
+    }
+
+    .project__button {
+        flex-direction: row;
+        column-gap: var(--mb-1);
+        justify-content: center;
+        margin-bottom: var(--mb-1);
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+    .header {
+        top: 0;
+        border-radius: 0;
+    }
+
+    .nav__logo {
+        display: block;
+        font-size: var(--h1-font-size);
+    }
+
+    .nav__list {
+        width: 50%;
+    }
+
+    .nav__icon {
+        display: none;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about__data {
+        background-color: transparent;
+    }
+
+    .about__img {
+        display: none;
+    }
+
+    .about__png {
+        display: block;
+        animation: translate 3s linear infinite alternate;
+    }
+
+    @keyframes translate {
+        from {transform: translateY(0);}
+        to {transform: translateY(30px)}
+    }
+
+    .skills {
+        margin: 1.5rem auto;
+        width: max-content;
+    }
+
+    .skills__data {
+        column-gap: var(--mb-1);
+    }
+
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: var(--mb-0-75);
+    }
+
+    .projects__title {
+        grid-column: span 3;
+    }
+
+    .footer {
+        padding: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .call div i {
+        margin-right: .5rem;
+        font-size: 1.3rem;
+    }
+
+    .social {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .social hr {
+        width: 100%;
+        height: 1px;
+        display: block;
+        background-color: #000;
+    }
+
+    .social__icon {
+        display: inline-block;
+    }
+
+    .social__icon:hover {
+        transform: translateY(-6px);
+    }
+
 }
