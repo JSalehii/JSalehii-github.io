@@ -167,3 +167,18 @@ let gen = generator();
 printChar(words[gen.next().value]);
 
 /*========================= link active ===============================*/
+
+const navLink = document.querySelectorAll(".nav__link");
+
+navLink.forEach((item) => {
+    item.addEventListener("click", (e) => {
+        let currentActive = null;
+        for (i = 0; i < navLink.length; i++) {
+            if (navLink[i].classList.contains("active")) {
+                currentActive = navLink[i];
+            }
+        }
+        currentActive.classList.remove("active");
+        e.currentTarget.classList.add("active");
+    });
+});
