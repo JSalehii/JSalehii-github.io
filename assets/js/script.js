@@ -1,5 +1,5 @@
 // particles background
-
+import '../../node_modules/particles.js/particles';
 particlesJS("particles-js", {
     particles: {
         number: {
